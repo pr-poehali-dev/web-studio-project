@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import ContactForm from '@/components/ContactForm';
 
 const Index = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -284,31 +285,46 @@ const Index = () => {
         </section>
 
         <section id="contact" className="py-20 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 text-white">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl font-bold mb-6">Готовы начать проект?</h2>
-            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Свяжитесь с нами, и мы обсудим ваши идеи. Первая консультация — бесплатно!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" variant="secondary" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8">
-                <Icon name="Mail" className="mr-2" size={20} />
-                info@webstudio.ru
-              </Button>
-              <Button size="lg" variant="secondary" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8">
-                <Icon name="Phone" className="mr-2" size={20} />
-                +7 (999) 123-45-67
-              </Button>
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-6">Готовы начать проект?</h2>
+              <p className="text-xl opacity-90 max-w-2xl mx-auto mb-4">
+                Заполните форму, и мы свяжемся с вами в ближайшее время
+              </p>
+              <p className="text-lg opacity-75">
+                Первая консультация — бесплатно!
+              </p>
             </div>
-            <div className="flex justify-center space-x-6">
-              <a href="#" className="hover:scale-110 transition-transform">
-                <Icon name="Github" size={28} />
-              </a>
-              <a href="#" className="hover:scale-110 transition-transform">
-                <Icon name="Linkedin" size={28} />
-              </a>
-              <a href="#" className="hover:scale-110 transition-transform">
-                <Icon name="Twitter" size={28} />
-              </a>
+
+            <ContactForm />
+
+            <div className="mt-16 text-center">
+              <p className="text-lg mb-6 opacity-90">Или свяжитесь с нами напрямую:</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="mailto:info@webstudio.ru" className="inline-flex">
+                  <Button size="lg" variant="secondary" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8">
+                    <Icon name="Mail" className="mr-2" size={20} />
+                    info@webstudio.ru
+                  </Button>
+                </a>
+                <a href="tel:+79991234567" className="inline-flex">
+                  <Button size="lg" variant="secondary" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8">
+                    <Icon name="Phone" className="mr-2" size={20} />
+                    +7 (999) 123-45-67
+                  </Button>
+                </a>
+              </div>
+              <div className="flex justify-center space-x-6">
+                <a href="#" className="hover:scale-110 transition-transform">
+                  <Icon name="Github" size={28} />
+                </a>
+                <a href="#" className="hover:scale-110 transition-transform">
+                  <Icon name="Linkedin" size={28} />
+                </a>
+                <a href="#" className="hover:scale-110 transition-transform">
+                  <Icon name="Twitter" size={28} />
+                </a>
+              </div>
             </div>
           </div>
         </section>
